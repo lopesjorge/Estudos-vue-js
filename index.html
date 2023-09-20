@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 1 - vueJs</title>
+    <!-- Scrip local -->
     <script src="./vue.js"></script>
+    <!-- CDN -->
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
 </head>
 <body>
-    <h1>Teste</h1>
+    
+<div class="app">
+    <h1>{{mensagem}} {{name}}</h1>
+</div>
+
+<script>
+/*
+// Parâmetro utilizado para inicializar a instância  
+const options = {
+    el: '.app', //Recebe a chamada da instância do Vue
+    data:{
+        name: 'Jorge',
+        mensagem: 'Seja bem-vindo'
+    }
+}
+
+  const vm = new Vue(options) //Inicializando uma instância do Vue
+  console.log(vm);
+  */
+
+ const vm = new Vue ({
+    el: '.app',
+    data:{
+        name: 'Jorge',
+        mensagem: 'Seja bem-vindo'
+        }
+    })
+
+console.log(vm);
+</script>
 </body>
 </html>
